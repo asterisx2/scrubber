@@ -58,7 +58,7 @@
     keepAttributes: [],
     keepAttributesWithValue: [],
     func: function(node) {
-      return htmlToElement('<df-option value="' + node.innerText + '" ' + 'displayText="'+ node.innerText + '"></df-input-container>');
+      return htmlToElement('<df-option value="' + node.innerText + '" ' + 'displayText="'+ node.innerText + '"></df-option>');
     }
    ```
 **The config file will most likely be different for different projects and will keep on growing as we start progressing on the project, there is an uptake in beginning as new mappings are to be created for the library components unique to the project, but its pretty straightforward and takes insignificant time** 
