@@ -23,6 +23,22 @@ var config = {
       return htmlToElement('<df-input-container><input type="' + node.type + '"' + 'value="' + node.value + '"></df-input-container>');
     },
   },
+  'input::type="password"': {
+    upgradeBootstrap: true,
+    buildChildren: false,
+    keepAttributes: [],
+    keepAttributesWithValue: [],
+    func: function (node) {
+      return htmlToElement('<df-input-container><input type="' + node.type + '"></df-input-container>');
+    },
+  },
+  'input::type="checkbox"': {
+    component: 'df-checkbox',
+    upgradeBootstrap: true,
+    buildChildren: false,
+    keepAttributes: [],
+    keepAttributesWithValue: [],
+  },
   'input': {
     component: 'input',
     upgradeBootstrap: true,
