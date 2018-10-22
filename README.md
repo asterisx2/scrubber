@@ -11,12 +11,24 @@
 - Replaces HTML with library components such as select to df-select, table to df-grid. This can be configured inside config.js. You can also do much more powerful mapping for components by using the key creator. More later
 
 ## How to use
+**It is recommended to check the ```How it works``` section first before proceeding**
+- To create template from legacy, follow the following steps:
+1. Copy the source html inside your browser, in chrome you can go to developer tools, select the HTML node and right click to select Copy > Copy as HTML
+2. Open index.html, select converter by clicking on the top left ```Converter``` link, paste the HTML inside the left box and click on convert button.
+3. Your template will appear inside the right box, click on the top left ```Copy``` button to copy it.
+
+- To create a key for an HTML node, follow the following steps: 
+1. Copy the source html inside your browser, in chrome you can go to developer tools, select the HTML node and right click to select Copy > Copy as HTML
+2. Open index.html, select Key Converter by clicking on the top left ```Key Convert``` button, paste the HTML inside the left box and click on ```Generate Key``` button.
+3. Your key will appear inside the right box, click on the top left ```Copy``` button to copy it.
+
+## How it works
 
 ### There are three main parts of the page
 
-- Converter (Inside index.html) - The page where you paste your put the legacy html inside the left box and click the xonvert button to get a template.
+- Converter (Inside index.html) - The page where you paste the legacy html inside the left textarea and click the convert button to get a template.
 
-- Key Creator (Inside index.html) - Creates a key for a HTML node. This is used aa a 'hash/key' to map HTML to df-components. This can be as complex or as simple as you want it to be. The mapping is generated automatically but YOU NEED TO MODIFY TO MAKE IT AS SUCCINT AS POSSIBLE BY MODIFYING WHAT'S GENERATED otherwise it will fail to match the correct HTML if it has more information then needed.
+- Key Creator (Inside index.html) - Creates a key for a HTML node. This is used as a 'hash/key' to map HTML to df-components. This can be as complex or as simple as you want it to be. The mapping is generated automatically but YOU NEED TO MODIFY TO MAKE IT AS SUCCINT AS POSSIBLE BY MODIFYING WHAT'S GENERATED otherwise it will fail to match the correct HTML if it has more information then needed.
 
 - The Config file. This is the main gist of the tool. The config file is a collection of mapping such as this
 
@@ -33,12 +45,12 @@
  
  What this tells the tool is 'hey whenever you encounter a div with ```id``` ```mainLeaderboard``` and an attribute ```style``` with value ```overflow:hidden;``` go ahead and do the following
  
- 1. Inject a df-panel in its place inside the template via passing its name to ```component```
- 2. Don't upgrade its bootstrap if it has any via the bool ```upgradeBootstrap```
- 3. Do not build its children via the bool ```buildChildren```
- 4. Keep certain attributes but not their value via ```keepAttributes``` array
- 5. Keep certain attributes and also their value via ```keepAttributes``` array
- 6. There is an additional filed called ```func```. In cases where more needs to be done then is possible by the above fields, you can pass a function which will recieve the node itself. Here is an example of that:
+ 1. Inject a df-panel in its place inside the template, via passing its name to ```component```
+ 2. Don't upgrade its bootstrap if it has any, via the bool ```upgradeBootstrap```
+ 3. Do not build its children, via the bool ```buildChildren```
+ 4. Keep certain attributes but not their value, via ```keepAttributes``` array
+ 5. Keep certain attributes and also their value, via ```keepAttributesWithValue``` array
+ 6. There is an additional field called ```func```. In cases where more needs to be done then is possible by the above fields, you can pass a function which will recieve the node itself. Here is an example of that:
  ```
   'option': {
     upgradeBootstrap: false,
