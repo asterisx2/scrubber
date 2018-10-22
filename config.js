@@ -6,7 +6,7 @@ var config = {
     keepAttributesWithValue: [],
     func: function (node) {
       let ths = node.getElementsByTagName('th');
-      let out = '<df-grid value>';
+      let out = '<df-grid [value]="">';
       for (var i = 0; i < ths.length; i++) {
         out += '<df-grid-column field="Field" header="Header"></df-grid-column>'.replace('Header', ths[i].innerText.trim()).replace('Field', camelize(ths[i].innerText.trim()));
       }
