@@ -6,7 +6,7 @@ var config = {
     keepAttributesWithValue: [],
     func: function (node) {
       let ths = node.getElementsByTagName('th');
-      let out = '<df-grid>';
+      let out = '<df-grid value>';
       for (var i = 0; i < ths.length; i++) {
         out += '<df-grid-column field="Field" header="Header"></df-grid-column>'.replace('Header', ths[i].innerText.trim()).replace('Field', camelize(ths[i].innerText.trim()));
       }
@@ -72,6 +72,15 @@ var config = {
     buildChildren: true,
     keepAttributes: [],
     keepAttributesWithValue: [],
+  },
+  'i::class="fa"': {
+    upgradeBootstrap: false,
+    buildChildren: true,
+    keepAttributes: [],
+    keepAttributesWithValue: [],
+    func: function(node) {
+      return node;
+    }
   },
   'option': {
     upgradeBootstrap: false,
