@@ -14,7 +14,7 @@ var config = {
       return htmlToElement(out);
     },
   },
-  'input': {
+  'input::type="text"': {
     upgradeBootstrap: true,
     buildChildren: false,
     keepAttributes: [],
@@ -22,6 +22,13 @@ var config = {
     func: function (node) {
       return htmlToElement('<df-input-container><input type="' + node.type + '"' + 'value="' + node.value + '"></df-input-container>');
     },
+  },
+  'input': {
+    component: 'input',
+    upgradeBootstrap: true,
+    buildChildren: false,
+    keepAttributes: [],
+    keepAttributesWithValue: ['type'],
   },
   'select': {
     component: 'df-select',

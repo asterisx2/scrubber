@@ -174,12 +174,13 @@ function compare(key, node) {
   for (let i = 0; i < values.length; i++) {
     let keyValuePair = values[i].split('=');
     let attrName = keyValuePair[0];
-    let attrValueArray = keyValuePair[1].replace('"', '').split(' ');
+    let attrValueArray = keyValuePair[1].replace('"', '').replace('"', '').split(' ');
     if(!node.getAttribute(attrName)) {
       return false;
     }
     for (let j = 0; j < attrValueArray.length ; j++ ) {
-      if(!node.getAttribute(attrName).indexOf(attrValueArray[j]) < 0) {
+      console.log(node.getAttribute(attrName), attrValueArray[j]);
+      if(node.getAttribute(attrName).indexOf(attrValueArray[j]) < 0) {
         return false;
       }
     }
