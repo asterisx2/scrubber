@@ -36,7 +36,7 @@ var config = {
     keepAttributes: [],
     keepAttributesWithValue: [],
     func: function(node) {
-      return htmlToElement('<df-option value="' + node.innerText + '" ' + 'displayText="'+ node.innerText + '"></df-input-container>');
+      return htmlToElement('<df-option value="' + node.innerText + '" ' + 'displayText="'+ node.innerText + '"></df-option>');
     }
   },
   'div::id="mainLeaderboard"::style="overflow:hidden;"': {
