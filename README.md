@@ -6,9 +6,9 @@
 
 - Cleansizes legacy html by stripping of extra HTML, attributes on a node etc to create a template you can use directly as a template in your components
 
-- Upgrades bootstrap classes if the page are using older versions of bootstrap, this helps you save some time in writing styling. yourself.
+- Upgrades bootstrap classes if the page is using older versions of bootstrap, this helps you save some time in writing styling yourself.
 
-- Replaces HTML with library components such as select to df-select, table to df-grid. This can be configured inside config.js. You can also do much more powerful mapping for components by using the key creator. More later
+- Replaces HTML with library components such as select to df-select, table to df-grid. This can be configured inside config.js. You can also do much more powerful mapping for components by using the key creator, check ```How it works```
 
 ## How to use
 **It is recommended to check the ```How it works``` section first before proceeding**
