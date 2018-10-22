@@ -47,7 +47,7 @@ var config = {
     keepAttributes: [],
     keepAttributesWithValue: [],
     func: function (node) {
-      return htmlToElement('<df-button>' + node.value + '</df-button>');
+      return htmlToElement('<button type="button" df-button>' + node.value + '</button>');
     },
   },
   'input::type="submit"': {
@@ -56,7 +56,7 @@ var config = {
     keepAttributes: [],
     keepAttributesWithValue: [],
     func: function (node) {
-      return htmlToElement('<df-button>' + node.value + '</df-button>');
+      return htmlToElement('<button type="button" df-button>' + node.value + '</button>');
     },
   },
   'input': {
