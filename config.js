@@ -46,12 +46,5 @@ var config = {
       return htmlToElement('<df-option value="' + node.innerText + '" ' + 'displayText="'+ node.innerText + '"></df-option>');
     }
   },
-  'div::id="mainLeaderboard"::style="overflow:hidden;"': {
-    component: 'df-panel',
-    upgradeBootstrap: false,
-    buildChildren: false,
-    keepAttributes: [],
-    keepAttributesWithValue: [],
-  },
 }
 
