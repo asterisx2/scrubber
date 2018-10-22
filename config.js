@@ -33,11 +33,31 @@ var config = {
     },
   },
   'input::type="checkbox"': {
-    component: 'df-checkbox',
+    upgradeBootstrap: true,
+    buildChildren: true,
+    keepAttributes: [],
+    keepAttributesWithValue: [],
+    func: function (node) {
+      return htmlToElement('<df-checkbox>' + node.innerText + '</df-checkbox>');
+    },
+  },
+  'input::type="button"': {
     upgradeBootstrap: true,
     buildChildren: false,
     keepAttributes: [],
     keepAttributesWithValue: [],
+    func: function (node) {
+      return htmlToElement('<df-button>' + node.value + '</df-button>');
+    },
+  },
+  'input::type="submit"': {
+    upgradeBootstrap: true,
+    buildChildren: false,
+    keepAttributes: [],
+    keepAttributesWithValue: [],
+    func: function (node) {
+      return htmlToElement('<df-button>' + node.value + '</df-button>');
+    },
   },
   'input': {
     component: 'input',
