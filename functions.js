@@ -87,9 +87,12 @@ var common = ["form-group", "active", "alert-danger", "alert-dismissible", "clos
 function attributesUtility(originalNode, node, config) {
   let attrs = originalNode.attributes;
   let newNode = node.cloneNode(true);
+  if(originalNode.hasAttribute('class') && !newNode.hasAttribute('class')) {
+    newNode.setAttribute('class', originalNode.getAttribute('class'));
+  }
   if (attrs && attrs.length) {
     for (var i = 0; i < attrs.length; i++) {
-      if (attrs[i].name != 'class') {
+      if (attrs[i].name !== 'class') {
         newNode.removeAttribute(attrs[i].name);
         if (config) {
           if (config.keepAttributesWithValue && config.keepAttributesWithValue.indexOf(attrs[i].name) !== -1) {

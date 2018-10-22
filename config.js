@@ -1,3 +1,4 @@
+// TODO Support for class being not extracted at all
 var config = {
   'table': {
     upgradeBootstrap: false,
