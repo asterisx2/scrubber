@@ -179,7 +179,6 @@ function compare(key, node) {
       return false;
     }
     for (let j = 0; j < attrValueArray.length ; j++ ) {
-      console.log(node.getAttribute(attrName), attrValueArray[j]);
       if(node.getAttribute(attrName).indexOf(attrValueArray[j]) < 0) {
         return false;
       }
