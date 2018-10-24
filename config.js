@@ -26,7 +26,7 @@ var config = {
   },
   'div::class="au-callout"': {
     upgradeBootstrap: false,
-    buildChildren: false,
+    buildChildren: true,
     keepAttributes: [],
     keepAttributesWithValue: [],
     func: function (node) {
