@@ -1,4 +1,5 @@
-// TODO Support for class being not extracted at all
+// TODO Support for attributes being not extracted at all
+// removeAttributes: []
 var config = {
   'table': {
     upgradeBootstrap: false,
