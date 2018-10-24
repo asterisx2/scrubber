@@ -24,6 +24,15 @@ var config = {
       return htmlToElement('<df-input-container><input type="' + node.type + '"' + 'value="' + node.value + '"></df-input-container>');
     },
   },
+  'div::class="au-callout"': {
+    upgradeBootstrap: false,
+    buildChildren: false,
+    keepAttributes: [],
+    keepAttributesWithValue: [],
+    func: function (node) {
+      return node;
+    },
+  },
   'input::type="password"': {
     upgradeBootstrap: true,
     buildChildren: false,
