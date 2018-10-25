@@ -84,6 +84,7 @@ var diff = {
   'col-sm-': 'col-md-',
 };
 var common = ["form-group", "active", "alert-danger", "alert-dismissible", "close", "alert-info", "alert-link", "alert-success", "alert-warning", "badge", "bg-danger", "bg-info", "bg-primary", "bg-success", "bg-warning", "breadcrumb", "btn", "btn-block", "btn-danger", "btn-group", "btn-group-lg", "btn-group-sm", "btn-group-vertical", "btn-info", "btn-link", "btn-lg", "btn-primary", "btn-sm", "btn-success", "btn-warning", "carousel", "carousel-caption", "carousel-indicators", "carousel-inner", "clearfix", "collapse", "container", "container-fluid", "disabled", "dropdown", "dropdown-header", "dropdown-menu", "dropdown-menu-right", "dropdown-toggle", "dropup", "embed-responsive", "embed-responsive-16by9", "embed-responsive-4by3", "embed-responsive-item", "fade", "form-control", "form-group", "form-inline", "h1 - .h6", "img-thumbnail", "initialism", "input-group", "input-group-lg", "input-group-sm", "input-lg", "input-sm", "invisible", "jumbotron", "lead", "list-group", "list-group-item", "list-group-item-danger", "list-group-item-info", "list-group-item-success", "list-group-item-warning", "list-inline", "list-unstyled", "mark", "media", "media-body", "modal", "modal-body", "modal-content", "modal-footer", "modal-header", "modal-lg", "modal-sm", "nav nav-tabs", "nav nav-pills", "nav-justified", "navbar", "navbar-brand", "navbar-collapse", "navbar-nav", "navbar-text", "pagination", "pagination-lg", "pagination-sm", "pre-scrollable", "progress", "progress-bar", "progress-bar-striped", "row", "small", "sr-only", "sr-only-focusable", "tab-content", "tab-pane", "table", "table-bordered", "table-condensed", "table-hover", "text-capitalize", "text-center", "text-danger", "text-hide", "text-info", "text-justify", "text-left", "text-lowercase", "text-muted", "text-nowrap", "text-primary", "text-right", "text-success", "text-uppercase", "text-warning"];
+
 function attributesUtility(originalNode, node, config) {
   let attrs = originalNode.attributes;
   let newNode = node.cloneNode(true);
@@ -106,6 +107,9 @@ function attributesUtility(originalNode, node, config) {
   }
   return newNode;
 }
+
+// TODO Add support for bootstrap 4
+// If bootstrap 4 classes then keep them
 function bootstrapUtility(node, config, common) {
   let cll = node.classList;
   if (!cll) {
