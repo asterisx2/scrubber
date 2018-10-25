@@ -109,7 +109,7 @@ function attributesUtility(originalNode, node, config) {
 }
 
 // TODO Add support for bootstrap 4
-// If bootstrap 4 classes then keep them
+// If bootstrap 4 classes are there, then keep them
 function bootstrapUtility(node, config, common) {
   let cll = node.classList;
   if (!cll) {
