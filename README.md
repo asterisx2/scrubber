@@ -8,7 +8,7 @@
 
 - Upgrades bootstrap classes if the page is using older versions of bootstrap, this helps you save some time in writing styling yourself.
 
-- Replaces HTML with library components such as select to df-select, table to df-grid. This can be configured inside config.js. You can also do much more powerful mapping for components by using the key creator, check ```How it works```
+- Replaces HTML with custom components such as ```select``` to ```app-select```, table to ```app-grid```. This can be configured inside config.js. You can also do much more powerful mapping for components by using the key creator, check ```How it works```
 
 ## How to use
 **It is recommended to check the ```How it works``` section first before proceeding**
@@ -61,4 +61,4 @@
       return htmlToElement('<df-option value="' + node.innerText + '" ' + 'displayText="'+ node.innerText + '"></df-option>');
     }
    ```
-**The config file will most likely be different for different projects and will keep on growing as we start progressing on the project, there is an uptake in beginning as new mappings are to be created for the library components unique to the project, but its pretty straightforward and takes insignificant time** 
+**The config file will most likely be different for different projects and will keep on growing as you start progressing on the project, there is an uptake in beginning as new mappings are to be created for the custom components unique to the project, but its pretty straightforward and takes insignificant time** 
