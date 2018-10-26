@@ -1,4 +1,4 @@
-# Scrubber - A recipe for scaffolding legacy angular code into templates
+# Scrubber - A recipe for scaffolding legacy html code into angular templates
 
 ## To run, clone the project and open main.html / index.html
 
